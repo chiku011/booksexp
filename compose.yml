@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  frontend:
+    build: ./Frontend
+    ports:
+      - 5173:5173
+    networks:
+      - mern-net
+
+  backend:
+    build: ./Backend
+    ports:
+      - 4000:4000
+    networks:
+      - mern-net
+
+networks:
+  mern-net: {}

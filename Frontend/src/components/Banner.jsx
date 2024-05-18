@@ -1,6 +1,8 @@
 import React from "react";
 import banner from "../../public/Banner.png";
+import { useNavigate } from "react-router-dom";
 function Banner() {
+  const navigate=useNavigate()
   return (
     <>
       <div className=" max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10">
@@ -11,9 +13,8 @@ function Banner() {
               <span className="text-pink-500">new everyday!!!</span>
             </h1>
             <p className="text-sm md:text-xl">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-              et totam. Tempora amet atque expedita, quae corrupti totam sed
-              pariatur corporis at veniam est voluptas animi!
+            Explore a vast collection of books, from timeless classics to modern masterpieces. Dive into new genres, discover hidden gems, and fuel your passion for reading.
+          
             </p>
             <label className="input input-bordered flex items-center gap-2">
               <svg
@@ -28,7 +29,7 @@ function Banner() {
               <input type="text" className="grow" placeholder="Email" />
             </label>
           </div>
-          <button className="btn mt-6 btn-secondary">Get Started</button>
+          <button className="btn mt-6 btn-secondary" onClick={()=>{navigate("/signup")}}>Get Started</button>
         </div>
         <div className=" order-1 w-full mt-20 md:w-1/2">
           <img

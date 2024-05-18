@@ -14,7 +14,7 @@ function Freebook() {
       try {
         const res = await axios.get("http://localhost:4001/book");
 
-        const data = res.data.filter((data) => data.category === "Free");
+        const data = res.data.filter((data) => data.category === "free");
         console.log(data);
         setBook(data);
       } catch (error) {
@@ -42,7 +42,7 @@ function Freebook() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -64,9 +64,7 @@ function Freebook() {
         <div>
           <h1 className="font-semibold text-xl pb-2">Free Offered Courses</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Accusantium veritatis alias pariatur ad dolor repudiandae eligendi
-            corporis nulla non suscipit, iure neque earum?
+          Discover the joy of reading with our collection of free books at [Your Bookstore]. Dive into a world of adventure, knowledge, and imagination without spending a dime. Whether you're looking for timeless classics or new favorites, our free section has something for everyone. Start your literary journey today and enjoy unlimited stories, all at no cost!
           </p>
         </div>
 

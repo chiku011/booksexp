@@ -26,9 +26,9 @@ function Signup() {
         console.log(res.data);
         if (res.data) {
           toast.success("Signup Successfully");
-          navigate(from, { replace: true });
+          localStorage.setItem("Users", JSON.stringify(res.data.user));
+          navigate("../");
         }
-        localStorage.setItem("Users", JSON.stringify(res.data.user));
       })
       .catch((err) => {
         if (err.response) {
@@ -39,7 +39,7 @@ function Signup() {
   };
   return (
     <>
-      <div className="flex h-screen items-center justify-center">
+      <div className="flex h-screen items-center justify-center" style={{ backgroundImage: "url('https://imgs.search.brave.com/QsvauscrhVeVBfUvjlBvH0MZgnz8vQ9RBNvEDZgrbSg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2FsbHBhcGVyc2Fm/YXJpLmNvbS8yMS82/NS9URTB0S0MuanBn')" }}>
         <div className=" w-[600px] ">
           <div className="modal-box">
             <form onSubmit={handleSubmit(onSubmit)} method="dialog">
